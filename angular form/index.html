@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+	
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <!--using app directive to bind my app behaviour-->
+  <body ng-app="myApp">
+  <div id="wrapper" class="clearfix">
+  		<h1 class="text-center">My Angular Form</h1>
+      <div class="col-md-3"></div>
+      <!--using controller directive bind my controller behaviour to my html-->
+      <div class="product col-md-6" ng-controller="MainController as ctrl">
+        <form class="form-horizontal" name="myForm" ng-submit="ctrl.submit()"  novalidate>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" name="email" class="form-control" id="inputEmail3" ng-model="ctrl.user.email" placeholder="john@example.com" ng-pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/" required>
+                   <span ng-show="myForm.email.$error.pattern">
+                   	This Field is Invalid please remember john@example.com
+                   </span>
+                    <span ng-show="myForm.email.$error.required">
+                   	This Field is Required
+                   </span>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" name="password" class="form-control" id="inputPassword3" ng-model="ctrl.user.password" placeholder="Password" ng-minlength="6" required >
+                    <span ng-show="myForm.password.$error.required">
+                   	This Field is Required
+                   </span>
+                   <span ng-show="myForm.password.$error.minlength">
+                   	The password must be at least 6 charcters long
+                   </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputTitle" class="col-sm-2 control-label">Title</label>
+                <div class="col-sm-10">
+                    <input type="text" name="title" class="form-control" id="inputTitle" ng-model="ctrl.user.title" placeholder="Title" required >
+                    <span ng-show="myForm.title.$error.required">
+                   	This Field is Required
+                   </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputMessage" class="col-sm-2 control-label">Message</label>
+                <div class="col-sm-10">
+                    <textarea type="text" name="message" class="form-control" id="inputMessage" ng-model="ctrl.user.message" placeholder="Message" required></textarea>
+                    <span ng-show="myForm.message.$error.required">
+                   	This Field is Required
+                   </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                	<input type="submit" class="btn btn-default" value="Submit" ng-disabled="myForm.$invalid" >
+                </div>
+            </div>
+        </form>
+        	<div class="table-responsive">
+                <table class="table table-striped">
+                  <tr><td>Email</td><td><span ng-bind="ctrl.user.email"></span></td></tr>
+                  <tr><td>Password</td><td><span ng-bind="ctrl.user.password"></span></td></tr>
+                  <tr><td>Title</td><td><span ng-bind="ctrl.user.title"></span></td></tr>
+                  <tr><td>Message</td><td><span ng-bind="ctrl.user.message"></span></td></tr>
+                </table>
+            </div>      
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
