@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* GLOBAL */
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clear{
+	clear:both;
+}
+/* LAYOUT */
+#products img{
+	height:114px;
+}
+#brand-logo{
+	width: 54px;
+}
+#backdrop{
+	height:300px;
+	background-image:url(../img/toronto.jpg);
+	background-position:center center;
+	background-size:auto;
+}
+/* NAVIGATION */
+
+/*BOOTSTRAP OVERRIDES*/
+.navbar-brand {
+  padding: 11px;
+  height: 80px;
+}
+.nav {
+  height: 80px;
+}
+/* VIDEO */
+
+/*Main Button Row*/
+figure{
+	width:95%;
+	height:150px;
+	background-color:#9933CC;
+	margin-bottom:10px;
+	border-radius:5px;
+}
+figcaption{
+	color:#FFFFFF;
+	line-height:150px;
+	font-size:30px;
+}
+#main-btn-row{
+	margin-top:75px;
+}
+#main-btn-row a{
+	text-decoration:none !important;
+}
+#beginner-link,#intermediate-link,#advanced-link{
+	/*opacity:0;*/
+}
+
+/*Beginner Page*/
+.beer-type-headings dt{
+	border-bottom:4px solid #9933CC;
+}
+.column-spacing{
+	margin:0 2px;
+}
+/* Product Results */
+#product-results img{
+	height:150px;
+}
+	
+/* Global */
+.purple-text{
+	color:#9933CC;
+}
+.beer-type-headings{
+	font-size:20px;
+}
+
+/*Media Queries*/
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+@media (min-width: 480px) and (max-width: 660px) {
+/* Styles */
+}
+/* Landscape phone to portrait tablet */
+@media (min-width: 660px) and (max-width: 767px) {
+/* Styles */
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 460px) {
+	h1,h2{
+		font-size:20px;
+	}
+}
+@media (max-width: 534px) and (min-width:460px) {
+	h1{
+		font-size:30px;
+	}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
