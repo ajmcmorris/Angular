@@ -1,0 +1,33 @@
+<div class="row">
+        	<h1 class="text-center">Beer Me - Product Results Page</h1>
+        </div>
+       
+      	<div class="row" id="product-results" ng-controller="darkBeerCtrl as darkCtrl">
+            <section class="col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="product in darkCtrl.productlist">
+            	<dl>
+                  <img class="center-block img-responsive" ng-src="{{product.image_thumb_url}}"/>
+                  <dt>Name</dt>
+                  <dd ng-bind="product.name"></dd>
+                  <dt>Brewery</dt>
+                  <dd ng-bind="product.producer_name"></dd>
+                  <!--<dt>Style</dt>
+                  <dd ng-bind="product.style"></dd>-->
+                  <dt>Product Number</dt>
+                  <dd ng-bind="product.product_no"></dd>
+                  <dt>ABV</dt>
+                  <dd ng-bind="product.alcohol_content / 100"></dd>
+                  <dt>Location</dt>
+                  <dd >456 Bloor Street West.</dd>
+                  <dt>In Stock</dt>
+                  <dd class="text-success">60 left</dd>
+                  <dt>Phone Number</dt>
+                  <dd><a href="" >435-657-7807</a></dd>
+                </dl>
+                <a href="#">View on Map</a>
+            </section>
+            
+        </div>
+      
+		 <div class="row text-center">
+        	<a href="#/findBeer">Try Again</a>
+         </div>

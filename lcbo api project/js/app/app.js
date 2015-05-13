@@ -2,25 +2,63 @@
 
 	var app = angular.module('app',['ngRoute']);
 		
+		
+		
+		//////////////////////////////////////////
 		app.config(['$routeProvider', function($routeProvider){
 				$routeProvider.when('/',{
-						templateUrl:'/js/views/beginner/index-temp.html'
-					}).when('/beginner',{
-						templateUrl:'/js/views/beginner/beginner-home.html',
-					}).when('/product-results',{
-						templateUrl:'/js/views/beginner/product-results.html',
+						templateUrl:'/js/views/index-temp.html'
+					}).when('/findBeer',{
+						templateUrl:'/js/views/find-home.html',
+					}).when('/light-results',{
+						templateUrl:'/js/views/light-results.html',
+					}).when('/fruit-results',{
+						templateUrl:'/js/views/fruit-results.html',
+					}).when('/dark-results',{
+						templateUrl:'/js/views/dark-results.html',
 					});
 			}]);
-			
-			app.controller('productCtrl',['$http',function($http){
+			////////////////////////////////////////////////
+			app.controller('lightBeerCtrl',['$http',function($http){
 			var self = this;
-			self.productlist;
-				$http.get('http://lcboapi.com/products? per_page=10 & q=light+malty', {
-					headers: {'Authorization': 'Token mytoken'}
+			self.productlist;			
+			
+				$http.get("http://lcboapi.com/products?where=is_ocb&where_not=is_dead&q=pilsner&q=ale&q=lager", {
+					headers: {'Authorization': 'Token MDowNTlmYWQ1Yy1kMGUwLTExZTQtOWIwYi1mZmJhNWMzYTk4YmU6S01UVGRveDg0V2FFYXZkS1VpVERnTmZJUVY0ZWV3UGR2QUly'}
 				}).then(function(response){
 					self.productlist = response.data.result;
 					console.log(self.productlist);
 					},function(errResponse){
 						console.log('error loading product data');
-						});
+						});					
 			}]);
+			////////////////////////////////////////////////
+			app.controller('fruitBeerCtrl',['$http',function($http){
+			var self = this;
+			self.productlist;			
+			
+				$http.get("http://lcboapi.com/products?where_not=is_dead&q=ipa&q=wheat&q=belgian+ale", {
+					headers: {'Authorization': 'Token MDowNTlmYWQ1Yy1kMGUwLTExZTQtOWIwYi1mZmJhNWMzYTk4YmU6S01UVGRveDg0V2FFYXZkS1VpVERnTmZJUVY0ZWV3UGR2QUly'}
+				}).then(function(response){
+					self.productlist = response.data.result;
+					console.log(self.productlist);
+					},function(errResponse){
+						console.log('error loading product data');
+						});					
+			}]);
+			////////////////////////////////////////////////
+			app.controller('darkBeerCtrl',['$http',function($http){
+			var self = this;
+			self.productlist;			
+			
+				$http.get("http://lcboapi.com/products?where=is_ocb&where_not=is_dead&q=stout", {
+					headers: {'Authorization': 'Token MDowNTlmYWQ1Yy1kMGUwLTExZTQtOWIwYi1mZmJhNWMzYTk4YmU6S01UVGRveDg0V2FFYXZkS1VpVERnTmZJUVY0ZWV3UGR2QUly'}
+				}).then(function(response){
+					self.productlist = response.data.result;
+					console.log(self.productlist);
+					},function(errResponse){
+						console.log('error loading product data');
+						});					
+			}]);
+			
+			
