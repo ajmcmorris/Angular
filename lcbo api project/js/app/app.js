@@ -24,7 +24,7 @@
 			self.productlist;			
 			
 				$http.get("http://lcboapi.com/products?where=is_ocb&where_not=is_dead&q=pilsner&q=ale&q=lager", {
-					headers: {'Authorization': 'Token MDowNTlmYWQ1Yy1kMGUwLTExZTQtOWIwYi1mZmJhNWMzYTk4YmU6S01UVGRveDg0V2FFYXZkS1VpVERnTmZJUVY0ZWV3UGR2QUly'}
+					headers: {'Authorization': 'Token my Token'}
 				}).then(function(response){
 					self.productlist = response.data.result;
 					console.log(self.productlist);
@@ -38,7 +38,7 @@
 			self.productlist;			
 			
 				$http.get("http://lcboapi.com/products?where_not=is_dead&q=ipa&q=wheat&q=belgian+ale", {
-					headers: {'Authorization': 'Token MDowNTlmYWQ1Yy1kMGUwLTExZTQtOWIwYi1mZmJhNWMzYTk4YmU6S01UVGRveDg0V2FFYXZkS1VpVERnTmZJUVY0ZWV3UGR2QUly'}
+					headers: {'Authorization': 'Token my Token'}
 				}).then(function(response){
 					self.productlist = response.data.result;
 					console.log(self.productlist);
@@ -51,8 +51,8 @@
 			var self = this;
 			self.productlist;			
 			
-				$http.get("http://lcboapi.com/products?where=is_ocb&where_not=is_dead&q=stout", {
-					headers: {'Authorization': 'Token MDowNTlmYWQ1Yy1kMGUwLTExZTQtOWIwYi1mZmJhNWMzYTk4YmU6S01UVGRveDg0V2FFYXZkS1VpVERnTmZJUVY0ZWV3UGR2QUly'}
+				$http.get("http://lcboapi.com/products?where_not=is_dead&q=stout", {
+					headers: {'Authorization': 'Token my Token'}
 				}).then(function(response){
 					self.productlist = response.data.result;
 					console.log(self.productlist);
