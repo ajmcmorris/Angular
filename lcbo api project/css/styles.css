@@ -1,39 +1,92 @@
-@charset "utf-8";
-/* GLOBAL */
-.fl{
-	float:left;
-}
-.fr{
-	float:right;
-}
-.clear{
-	clear:both;
-}
-/* LAYOUT */
-#products img{
-	height:114px;
-}
-#brand-logo{
-	width: 54px;
-}
-#backdrop{
-	height:300px;
-	background-image:url(../img/toronto.jpg);
-	background-position:center center;
-	background-size:auto;
-}
-/* NAVIGATION */
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../fonts/bebasneue-webfont.eot');
+    src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue-webfont.woff') format('woff'),
+         url('../fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-/*BOOTSTRAP OVERRIDES*/
-.navbar-brand {
-  padding: 11px;
-  height: 80px;
 }
-.nav {
-  height: 80px;
-}
-/* VIDEO */
+@font-face {
+    font-family: 'exmouthregular';
+    src: url('../fonts/exmouth_-webfont.eot');
+    src: url('../fonts/exmouth_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/exmouth_-webfont.woff2') format('woff2'),
+         url('../fonts/exmouth_-webfont.woff') format('woff'),
+         url('../fonts/exmouth_-webfont.ttf') format('truetype'),
+         url('../fonts/exmouth_-webfont.svg#exmouthregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+/* Global */
+.myBtn{
+	padding:10px 15px;
+	border:1px solid rgba(156, 39, 176, 1);
+	margin-top:15px;
+}
+h1,h2{
+	font-size:50px;
+	font-family: 'exmouthregular';
+}
+.wht-font{
+	color:#FFFFFF !important;
+}
+.wht-bkg{
+	background-color:rgba(255,255,255,1);
+}
+.section-spacing{
+	padding:15px 0;
+}
+.fa {
+  color: rgba(255,255,255,.8);
+}
+.bkg{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: auto cover;
+	background:bottom center scroll no-repeat;
+}
+.brd-btm{
+	border-bottom:1px solid rgba(255,255,255,.5);
+}
+#toronto{
+	background-image:url(../img/toronto-small.jpg);
+	height:340px;
+}
+#footer-pnk-bkg {
+	background-color: rgba(233, 30, 99, .5);
+	height: 100px;
+}
+.blu-bkg{
+	background-color:rgba(21, 84, 94, .9);
+}
+.gry-bkg{
+	background-color:rgba(137, 145, 134, .4);
+}
+.blu-bkg{
+	background-color:rgba(3, 169, 244, .4);
+}
+.pnk-bkg{
+	background-color:rgba(245, 111, 108, 1);
+}
+.prp-bkg{
+	background-color:rgba(156, 39, 176, 1);
+}
+.find-beer-lists{
+	list-style-type: none;
+	padding-left:0 !important;
+}
+#landing-spacing{
+	padding:140px 0 0 0;
+}
+#frm-mrg{
+	margin-top:60px;
+}
 /*Main Button Row*/
 figure{
 	width:95%;
@@ -68,57 +121,66 @@ figcaption{
 #product-results img{
 	height:150px;
 }
-	
-/* Global */
-.purple-text{
-	color:#9933CC;
+/*Navigation*/
+::-webkit-input-placeholder {
+   color: #fff !important;
 }
-.beer-type-headings{
-	font-size:20px;
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff !important;  
 }
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff !important;  
+}
+
+:-ms-input-placeholder {  
+   color: #fff !important;  
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #fff;
+  background-color: rgba(245, 111, 108, 1);
+  border: 1px solid rgba(245, 111, 108, 1);
+}
+/*Bootstrap Reset*/
 
 /*Media Queries*/
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
+/*Small Devices*/
+@media (min-width: 768px){
+#toronto{
+background-image:url(../img/toronto-small.jpg);
+height:440px;
+}
+}
+/*Medium Devices*/
+@media (min-width: 992px){
+#toronto{
+background-image:url(../img/toronto-medium.jpg);
+height:535px;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+}
+/*Large Devices*/
+@media (min-width: 1200px){
+#toronto{
+background-image:url(../img/toronto-large.jpg);
+height:822px;
+}
+h1{
+	font-size:70px;
+}
+}
+/*Extra Large Devices*/
+@media (min-width : 1824px) {
 /* Styles */
-}
-@media (min-width: 480px) and (max-width: 660px) {
-/* Styles */
-}
-/* Landscape phone to portrait tablet */
-@media (min-width: 660px) and (max-width: 767px) {
-/* Styles */
-}
-/* Landscape phone to portrait tablet */
-@media (max-width: 460px) {
-	h1,h2{
-		font-size:20px;
-	}
-}
-@media (max-width: 534px) and (min-width:460px) {
-	h1{
-		font-size:30px;
-	}
-}
 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { ... }
-
-
-/* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
-/* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen and (min-width : 1824px) {
-/* Styles */
 }
 
 /* iPads (portrait and landscape) ----------- */
